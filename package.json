@@ -1,0 +1,19 @@
+{
+  "name": "piecon",
+  "version": "0.0.0",
+  "description": "A tiny javascript library for generating progress pie charts in your favicon.",
+  "main": "piecon.js",
+  "directories": {
+    "example": "example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/shtylman/piecon.git"
+  },
+  "keywords": [
+    "piecon"
+  ],
+  "author": "Lukas Lipka <lukaslipka@gmail.com>",
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}
