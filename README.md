@@ -6,17 +6,30 @@ A tiny javascript library for dynamically generating progress pie charts in your
 
 <p align="center"><img src="https://github.com/lipka/piecon/blob/master/example/screenshot.png?raw=true"></p>
 
-[Interactive Demo](http://tryme.jitsu.com/shtylman/piecon/example/)
+[Interactive Demo](http://tryme.jitsu.com/shtylman/piecon)
 
 ## Documentation
 
 ### Basic usage
 
 ```javascript
-Piecon.setProgress(12);
-Piecon.setProgress(25);
-...
-Piecon.reset();
+var Piecon = require('piecon');
+
+var count = 0;
+Piecon.setOptions({fallback: 'force'});
+var i = setInterval(function(){
+  if (++count > 100) {
+    // clears the icon
+    Piecon.reset();
+    clearInterval(i);
+    return false;
+  }
+
+  // this is what sets the actual progress count
+  Piecon.setProgress(count);
+}, 250);
+
+'check out the favicon' // =>
 ```
 
 ### Options
